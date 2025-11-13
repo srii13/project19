@@ -1,0 +1,12 @@
+[build]
+  # This project doesn't have a build step, so we just tell Netlify that.
+  command = "echo 'No build step required'"
+  # The main folder (root) contains our index.html file.
+  publish = "/"
+
+# This is a magic rule for single-page apps like yours. 
+# It ensures that your app loads correctly even if someone refreshes the page.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
